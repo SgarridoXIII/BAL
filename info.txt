@@ -1,0 +1,16 @@
+****Allure reporter****
+
+Requisitos Java 8+
+
+Instalación npm install --save-dev mocha-allure-reporter allure-commandline
+
+Parametrizar el job con "--reporter mocha-allure-reporter"
+
+Report de Json a HTML "report:allure": npx allure generate allure-results --clean -o allure-report
+Abrir Report: npx allure open allure-report
+
+***Lanzar ejecuciones***
+
+Lanzar job clean  ----------------------------------npm run clean
+Lanzar ejecucion de la app a probar-----------------npm run Goldwell (por ejemplo)
+Lanzar job report-----------------------------------npm run report

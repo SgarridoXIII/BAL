@@ -1,0 +1,45 @@
+{
+  "name": "bal-qa-automation",
+  "version": "1.0.0",
+  "description": "npx cypress run --record --key 74cc88f5-93be-4bb3-88b0-9ca31236af0f",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./allure-results ./allure-report",
+    "Goldwell": "npx cypress run --browser=electron --spec \"cypress/e2e/Goldwell.cy.js\" --reporter mocha-allure-reporter",
+    "ECI": "npx cypress run --browser=chrome --headed --spec \"cypress/e2e/ComsECI.cy.js\" --reporter mocha-allure-reporter",
+    "Jornada": "npx cypress run --browser=chrome --spec \"cypress/e2e/Jornada.cy.js\" --reporter mocha-allure-reporter",
+    "Incentivos": "npx cypress run --browser=chrome --spec \"cypress/e2e/Incen.cy.js\" --reporter mocha-allure-reporter",
+    "Presupuesto": "npx cypress run --browser=chrome --spec \"cypress/e2e/Presupuestos.cy.js\" --reporter mocha-allure-reporter",
+    "Lab": "npx cypress run --browser=chrome --spec \"cypress/e2e/Lab.cy.js\" --reporter mocha-allure-reporter",
+    "Backend": "npx cypress run --browser=chrome --spec \"cypress/e2e/Back\" --reporter mocha-allure-reporter",
+    "report": "allure generate allure-results --clean -o allure-report && allure open  allure-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "allure-commandline": "^2.27.0",
+    "chai": "^5.0.0",
+    "cy-verify-downloads": "^0.2.3",
+    "cypress": "^13.6.6",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-wait-until": "^3.0.1",
+    "cypress-xpath": "^2.0.1",
+    "mocha-allure-reporter": "^1.4.0",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "puppeteer": "^22.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SgarridoXIII/BAL.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SgarridoXIII/BAL/issues"
+  },
+  "homepage": "https://github.com/SgarridoXIII/BAL#readme"
+}
